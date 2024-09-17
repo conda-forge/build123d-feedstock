@@ -9,8 +9,6 @@ Package license: Apache-2.0
 
 Summary: A python CAD programming library
 
-Development: https://github.com/simplejson/simplejson
-
 Documentation: https://build123d.readthedocs.io/
 
 Build123d is a python-based, parametric, boundary representation (BREP)
