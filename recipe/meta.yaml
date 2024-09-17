@@ -63,7 +63,6 @@ about:
   license_family: Apache
   license_file: LICENSE
   doc_url: https://build123d.readthedocs.io/
-  dev_url: https://github.com/simplejson/simplejson
 
 extra:
   recipe-maintainers:
