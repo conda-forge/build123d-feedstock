@@ -1,5 +1,5 @@
 {% set name = "build123d" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/gumyr/build123d/archive/v{{ version }}.tar.gz
-  sha256: fe75d61a5898fe68c7af937e2bedfa26b29166f8489f8c14462ce004e032a7b6
+  sha256: b38d749de4b83adfa97cc94075fe681701234cf0633f8114a59c1d6a5ebe1a54
   patches:
     - 0001-Use-lib3mf-python.patch
     - 0002-Don-t-try-to-help-lib3mf-find-it-s-library.patch
