@@ -24,6 +24,7 @@ requirements:
     - python >=3.9
     - pip
     - setuptools
+    - setuptools_scm >=6.2
   run:
     - anytree >=2.8.0,<3
     - cadquery
