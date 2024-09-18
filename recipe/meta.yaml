@@ -13,10 +13,11 @@ source:
     - 0002-Don-t-try-to-help-lib3mf-find-it-s-library.patch
     - 0003-Change-explicit-dependency-lock-version.patch
     - 0004-Fix-raw-regex.patch
+    - 0005-Fix-dependency-names-for-conda-forge.patch
 
 build:
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -43,9 +44,11 @@ test:
   imports:
     - build123d
   requires:
-    - pytest
+    - pip
     - libgl    # [linux]
+    - pytest
   commands:
+    - pip check
     - pytest
 
 about:
