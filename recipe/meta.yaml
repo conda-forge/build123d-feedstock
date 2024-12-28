@@ -1,5 +1,7 @@
 {% set name = "build123d" %}
 {% set version = "0.7.0" %}
+# Package is 3.9. But dependencies (lib3mf) prevent building against lowest
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -12,28 +14,27 @@ source:
     - 0001-Use-lib3mf-python.patch
     - 0002-Don-t-try-to-help-lib3mf-find-it-s-library.patch
     - 0003-Change-explicit-dependency-lock-version.patch
-    - 0004-Fix-raw-regex.patch
     - 0005-Fix-dependency-names-for-conda-forge.patch
+    - 0006-Remove-cadquery.patch
 
 build:
   noarch: python
-  number: 1
+  number: 2
 
 requirements:
   build:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
     - setuptools_scm >=6.2
   run:
     - anytree >=2.8.0,<3
-    - cadquery
     - ezdxf >1.1.0,<2
     - lib3mf-python =2.3.2
     - numpy
     - ocp >=7.7.0
     - ocpsvg
-    - python >=3.9
+    - python {{ python_min }}
     - svgpathtools >=1.5.1,<2
     - trianglesolver
     - typing_extensions >=4.6.0,<5
@@ -46,6 +47,7 @@ test:
     - build123d
   requires:
     - pip
+    - python {{ python_min }}
     - libgl    # [linux]
     - pytest
   commands:

@@ -1,25 +1,17 @@
-From 3a8c51a209e567f7ec5e65e359cca1da24904c6a Mon Sep 17 00:00:00 2001
+From 5586041919d8a8b94cbd12a627574946c8cb5e5b Mon Sep 17 00:00:00 2001
 From: Nicholas Devenish <ndevenish@gmail.com>
 Date: Wed, 18 Sep 2024 22:07:11 +0100
-Subject: [PATCH 5/5] Fix dependency names for conda-forge
+Subject: [PATCH 5/6] Fix dependency names for conda-forge
 
 ---
- pyproject.toml | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ pyproject.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index 007963a..0d267ff 100644
+index 007963a..9561b29 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
-@@ -35,14 +35,14 @@ classifiers = [
- ]
- 
- dependencies = [
--    "cadquery-ocp >= 7.7.0",
-+    "cadquery >= 2.2.0",
-     "typing_extensions >= 4.6.0, <5",
-     "numpy >= 1.24.1, <2",
-     "svgpathtools >= 1.5.1, <2",
+@@ -42,7 +42,7 @@ dependencies = [
      "anytree >= 2.8.0, <3",
      "ezdxf >= 1.1.0, < 2",
      "ipython >= 8.0.0, <9",
@@ -29,5 +21,5 @@ index 007963a..0d267ff 100644
      "trianglesolver"
  ]
 -- 
-2.46.0
+2.46.2
 
