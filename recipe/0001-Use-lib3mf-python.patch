@@ -1,6 +1,6 @@
-From cd9c30ab1d9abc7cba28aeb2fd313382898d004a Mon Sep 17 00:00:00 2001
+From 6c4d64bc253d3674b26bc153db01bac10a50439d Mon Sep 17 00:00:00 2001
 From: Nicholas Devenish <ndevenish@gmail.com>
-Date: Wed, 4 Sep 2024 14:15:36 +0100
+Date: Sat, 28 Dec 2024 20:43:53 +0000
 Subject: [PATCH 1/4] Use lib3mf-python
 
 ---
@@ -8,18 +8,18 @@ Subject: [PATCH 1/4] Use lib3mf-python
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/build123d/mesher.py b/src/build123d/mesher.py
-index 884ff53..6aea957 100644
+index 4380bd9..f81b80b 100644
 --- a/src/build123d/mesher.py
 +++ b/src/build123d/mesher.py
-@@ -109,7 +109,7 @@ from OCP.TopExp import TopExp_Explorer
- from OCP.TopoDS import TopoDS_Compound
+@@ -107,7 +107,7 @@ from OCP.TopAbs import TopAbs_ShapeEnum
+ from OCP.TopExp import TopExp_Explorer
  from OCP.TopLoc import TopLoc_Location
- 
+ from OCP.TopoDS import TopoDS_Compound
 -from py_lib3mf import Lib3MF
 +from lib3mf import Lib3MF
+ 
  from build123d.build_enums import MeshType, Unit
- from build123d.geometry import Color, TOLERANCE, Vector
- from build123d.topology import Compound, Face, Shape, Shell, Solid, downcast
+ from build123d.geometry import TOLERANCE, Color
 -- 
-2.39.3 (Apple Git-146)
+2.46.2
 
