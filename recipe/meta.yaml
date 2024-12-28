@@ -21,7 +21,7 @@ build:
 
 requirements:
   build:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
     - setuptools_scm >=6.2
@@ -32,7 +32,7 @@ requirements:
     - numpy
     - ocp >=7.7.0
     - ocpsvg
-    - python >=3.9
+    - python {{ python_min }}
     - svgpathtools >=1.5.1,<2
     - trianglesolver
     - typing_extensions >=4.6.0,<5
@@ -45,6 +45,7 @@ test:
     - build123d
   requires:
     - pip
+    - python {{ python_min }}
     - libgl    # [linux]
     - pytest
   commands:
