@@ -1,5 +1,7 @@
 {% set name = "build123d" %}
 {% set version = "0.7.0" %}
+# Package is 3.9. But dependencies (lib3mf) prevent building against lowest
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
