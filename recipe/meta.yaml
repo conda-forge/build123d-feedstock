@@ -34,7 +34,7 @@ requirements:
     - numpy
     - ocp >=7.7.0
     - ocpsvg
-    - python {{ python_min }}
+    - python ?={{ python_min }}
     - svgpathtools >=1.5.1,<2
     - trianglesolver
     - typing_extensions >=4.6.0,<5
