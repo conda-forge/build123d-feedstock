@@ -1,4 +1,4 @@
-From d7d910cf84b7ec295aae92dd0172090cc1d65eac Mon Sep 17 00:00:00 2001
+From a8e2619c95ae40dd54a578efbfbe6aeb293b65a5 Mon Sep 17 00:00:00 2001
 From: Nicholas Devenish <ndevenish@gmail.com>
 Date: Sat, 28 Dec 2024 17:50:09 +0000
 Subject: [PATCH 6/6] Remove cadquery
@@ -12,7 +12,7 @@ so that pip-check passes.
  1 file changed, 1 deletion(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index 83056ab..f636cf8 100644
+index 9561b29..368bb2d 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -35,7 +35,6 @@ classifiers = [

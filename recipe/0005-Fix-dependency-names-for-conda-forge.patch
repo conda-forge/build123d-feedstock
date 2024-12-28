@@ -1,4 +1,4 @@
-From f16e0497a5fff6c2af55958cbe097b05a607c96c Mon Sep 17 00:00:00 2001
+From 5586041919d8a8b94cbd12a627574946c8cb5e5b Mon Sep 17 00:00:00 2001
 From: Nicholas Devenish <ndevenish@gmail.com>
 Date: Wed, 18 Sep 2024 22:07:11 +0100
 Subject: [PATCH 5/6] Fix dependency names for conda-forge
@@ -8,7 +8,7 @@ Subject: [PATCH 5/6] Fix dependency names for conda-forge
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index 007963a..83056ab 100644
+index 007963a..9561b29 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -42,7 +42,7 @@ dependencies = [
@@ -16,7 +16,7 @@ index 007963a..83056ab 100644
      "ezdxf >= 1.1.0, < 2",
      "ipython >= 8.0.0, <9",
 -    "py-lib3mf >= 2.3.1",
-+    "lib3mf-python >= 2.3.1",
++    "lib3mf >= 2.3.1",
      "ocpsvg",
      "trianglesolver"
  ]
