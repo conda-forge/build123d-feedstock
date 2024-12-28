@@ -13,9 +13,8 @@ source:
   patches:
     - 0001-Use-lib3mf-python.patch
     - 0002-Don-t-try-to-help-lib3mf-find-it-s-library.patch
-    - 0003-Change-explicit-dependency-lock-version.patch
-    - 0005-Fix-dependency-names-for-conda-forge.patch
-    - 0006-Remove-cadquery.patch
+    - 0003-Fix-dependency-names-for-conda-forge.patch
+    - 0004-Remove-cadquery.patch
 
 build:
   noarch: python

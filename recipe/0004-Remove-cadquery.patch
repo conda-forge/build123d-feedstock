@@ -1,0 +1,28 @@
+From 1fbbe14c8bad842760289ae8065956622b62c257 Mon Sep 17 00:00:00 2001
+From: Nicholas Devenish <ndevenish@gmail.com>
+Date: Sat, 28 Dec 2024 17:50:09 +0000
+Subject: [PATCH 4/4] Remove cadquery
+
+The actual dependency is OCP, via cadquery-ocp, but on
+conda-forge the ocp package installs a python library
+but doesn't install the metadata properly. Remove here
+so that pip-check passes.
+---
+ pyproject.toml | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 9b77751..33d635e 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -35,7 +35,6 @@ classifiers = [
+ ]
+ 
+ dependencies = [
+-    "cadquery-ocp >= 7.7.0",
+     "typing_extensions >= 4.6.0, <5",
+     "numpy >= 2, <3",
+     "svgpathtools >= 1.5.1, <2",
+-- 
+2.46.2
+
