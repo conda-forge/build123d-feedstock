@@ -1,5 +1,5 @@
 {% set name = "build123d" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.1" %}
 # Package is 3.9. But dependencies (lib3mf) prevent building against lowest
 {% set python_min = "3.12" %}
 
@@ -9,16 +9,16 @@ package:
 
 source:
   url: https://github.com/gumyr/build123d/archive/v{{ version }}.tar.gz
-  sha256: 604f33a6518f97d1f59a5b6caa11748c61de00d0dd89177930a72dfbaacee8c4
+  sha256: d339879e8a343cfbf3382d6ff13c852728447e3c681debcaf10c198185816a75
   patches:
-     - 0001-fix-lib3mf-name-and-versioning-to-enable-building-ve.patch
+    - 0001-fix-lib3mf-name-and-versioning-to-enable-building-ve.patch
 
 build:
   noarch: python
   number: 0
 
 requirements:
-  build:
+  host:
     - python {{ python_min }}
     - pip
     - setuptools
