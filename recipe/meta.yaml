@@ -1,7 +1,6 @@
 {% set name = "build123d" %}
 {% set version = "0.9.1" %}
-# Package is 3.9. But dependencies (lib3mf) prevent building against lowest
-{% set python_min = "3.12" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -30,7 +29,7 @@ requirements:
     - numpy
     - ocp >=7.8,<7.9
     - ocpsvg >=0.4
-    - python {{ python_min }}
+    - python >={{ python_min }}
     - svgpathtools >=1.5.1,<2
     - trianglesolver
     - typing_extensions >=4.6.0,<5
