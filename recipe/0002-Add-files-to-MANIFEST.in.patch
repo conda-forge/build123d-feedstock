@@ -1,0 +1,25 @@
+From 04b63f34c05d4358249b5901069daac6f666ffc4 Mon Sep 17 00:00:00 2001
+From: Nicholas Devenish <ndevenish@gmail.com>
+Date: Sun, 27 Apr 2025 17:00:29 +0100
+Subject: [PATCH 2/2] Add files to MANIFEST.in
+
+These seem to be included in python -mbuild, but are missing
+in the conda-build build, for some reason.
+---
+ MANIFEST.in | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/MANIFEST.in b/MANIFEST.in
+index 0b097f3..1a92745 100644
+--- a/MANIFEST.in
++++ b/MANIFEST.in
+@@ -1,2 +1,4 @@
+ # exclude build123d._dev from sdists
+-prune src/build123d/_dev
+\ No newline at end of file
++prune src/build123d/_dev
++include src/build123d/template_render.js
++include src/build123d/py.typed
+-- 
+2.46.2
+

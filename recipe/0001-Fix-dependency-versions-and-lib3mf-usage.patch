@@ -1,0 +1,58 @@
+From 0742d1b2feb5fa8297e3c1b07e62c179308b7336 Mon Sep 17 00:00:00 2001
+From: Nicholas Devenish <ndevenish@gmail.com>
+Date: Sun, 27 Apr 2025 15:44:30 +0100
+Subject: [PATCH] Fix dependency versions and lib3mf usage
+
+- OCP is the dependency, cadquery is used on pypi to get that
+- Let lib3mf find itself
+---
+ pyproject.toml          | 3 +--
+ src/build123d/mesher.py | 5 ++---
+ 2 files changed, 3 insertions(+), 5 deletions(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 4a71828..41bde14 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -35,14 +35,13 @@ classifiers = [
+ ]
+ 
+ dependencies = [
+-    "cadquery-ocp >= 7.8, < 7.9",
+     "typing_extensions >= 4.6.0, < 5",
+     "numpy >= 2, < 3",
+     "svgpathtools >= 1.5.1, < 2",
+     "anytree >= 2.8.0, < 3",
+     "ezdxf >= 1.1.0, < 2",
+     "ipython >= 8.0.0, < 9",
+-    "py-lib3mf >= 2.3.1",
++    "lib3mf >= 2.3.1",
+     "ocpsvg >= 0.4",
+     "trianglesolver",
+ ]
+diff --git a/src/build123d/mesher.py b/src/build123d/mesher.py
+index de102a1..80c7d19 100644
+--- a/src/build123d/mesher.py
++++ b/src/build123d/mesher.py
+@@ -109,7 +109,7 @@ from OCP.TopAbs import TopAbs_ShapeEnum
+ from OCP.TopExp import TopExp_Explorer
+ from OCP.TopLoc import TopLoc_Location
+ from OCP.TopoDS import TopoDS_Compound
+-from py_lib3mf import Lib3MF
++from lib3mf import Lib3MF
+ 
+ from build123d.build_enums import MeshType, Unit
+ from build123d.geometry import TOLERANCE, Color
+@@ -149,8 +149,7 @@ class Mesher:
+ 
+     def __init__(self, unit: Unit = Unit.MM):
+         self.unit = unit
+-        libpath = os.path.dirname(Lib3MF.__file__)
+-        self.wrapper = Lib3MF.Wrapper(os.path.join(libpath, "lib3mf"))
++        self.wrapper = Lib3MF.Wrapper()
+         self.model = self.wrapper.CreateModel()
+         self.model.SetUnit(Mesher._map_b3d_to_3mf_unit[unit])
+         self.meshes: list[Lib3MF.MeshObject] = []
+-- 
+2.46.2
+
