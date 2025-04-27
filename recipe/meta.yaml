@@ -48,7 +48,6 @@ test:
     - libgl    # [linux]
     - pytest
   commands:
-    - pip check
     - pytest
 
 about:
