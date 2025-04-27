@@ -10,7 +10,7 @@ source:
   url: https://github.com/gumyr/build123d/archive/v{{ version }}.tar.gz
   sha256: d339879e8a343cfbf3382d6ff13c852728447e3c681debcaf10c198185816a75
   patches:
-    - 0001-fix-lib3mf-name-and-versioning-to-enable-building-ve.patch
+    - 0001-Fix-dependency-versions-and-lib3mf-usage.patch
 
 build:
   noarch: python
